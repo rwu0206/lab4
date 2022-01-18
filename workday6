@@ -1,0 +1,12 @@
+#Problem 9
+
+def isPythag(a, b , c): #if the 3 vals match pythag theorem
+    return a**2 + b**2 == c**2
+
+for a in range(1,332): #highest a can be is 331
+    for b in range(int(a)+1, (int(1000-a/2))): #b has to be between 333 half of the remaining difference between 1000 and a
+        c = 1000 - a - b
+        if isPythag(a, b, c):
+            print(a*b*c)
+
+
